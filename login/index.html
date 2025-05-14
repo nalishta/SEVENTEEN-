@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk | SEVENTEEN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <form action="" class="form"></form>
+        <h2>Selamat Datang, CARAT! 💎</h2>
+            <div class="input-group">
+                <input type="text" name="UserID" id="UserID" placeholder="nama pengguna" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" id="password" placeholder="kata sandi" required>
+            </div>
+            <input type="submit" value="Masuk" class="submit-btn" onclick= "auth()" style="font-size:18px;" />
+            <p class="forgot"><a href="#">Lupa kata sandi?</a></p>
+        </form>
+    </div>
+    <script>
+        function auth(){
+        var UserID = document.getElementById("UserID").value;
+        var password = document.getElementById("password").value; 
+        if(UserID== "admin" && password=="admin123"){
+    
+        window.location.href="../admin/Ready-Bootstrap-Dashboard-master/index.html";
+        alert("Berhasil masuk ");
+        }
+        else{
+        alert("Pengguna tidak diketahui");
+        return;
+        }
+    }
+    </script>
+</body>
+</html>
